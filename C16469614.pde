@@ -1,5 +1,6 @@
 //declaring datatype and variable for image
 PImage backgroundimage;
+PImage photo;
 //declaring 2 variables to repeat the background image
 int cols;
 int rows;
@@ -22,6 +23,8 @@ void pics()
   if ( height%backgroundimage.height > 0) {
     rows++;
   }
+  //setting image to variable
+  photo = loadImage("deathstar.jpg");
   //for loop to print the image repeatedly to the background 
   image(backgroundimage, 0, 0);
   for (int y=-600; y<rows; y++)
