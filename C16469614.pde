@@ -53,6 +53,18 @@ void drawPanell()
   //set the x and y axis to the center of the rectangle
   rectMode(CENTER);
   rect(width/2-10, 640, 80, 50);
+  
+    rectMode(CENTER);
+  // rectangle design for speakers
+  fill(100);
+  rect(width/2+20, 570, 5, 25);
+  rect(width/2+10, 570, 5, 25);
+  rect(width/2, 570, 5, 25);
+  rect(width/2-10, 570, 5, 25);
+  rect(width/2-20, 570, 5, 25);
+  rect(width/2-30, 570, 5, 25);
+  rect(width/2-40, 570, 5, 25);
+
 }
 void draw() 
 {
