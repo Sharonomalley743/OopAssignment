@@ -134,6 +134,16 @@ void draw()
   //calling classes to shoot from death star
   shoot1.update();
   shoot1.display();
+  String s = "Death Star Control Panel";
+  String d = "Engine";
+  fill(255);
+  textAlign(CENTER);
+  textSize(20); 
+  text(s, 595, 855, 170, 90);  // Text wraps within text box
+  textSize(15);
+  text(d, 750, 905, 170, 90);  // Text wraps within text box
+//  explode.update();
+//  explode.display();
 }
 
 void mouseReleased()
