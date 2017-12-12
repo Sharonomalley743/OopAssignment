@@ -3,6 +3,7 @@ import ddf.minim.*;
 Minim minim;
 //declaring variable for sound
 AudioPlayer blast;
+AudioPlayer scanner;
 //declaring datatype and variable for image
 PImage backgroundimage;
 PImage photo;
@@ -26,6 +27,7 @@ void setup()
   minim = new Minim(this);
   //setting music file to variable
   blast = minim.loadFile("blast.mp3");
+  scanner = minim.loadFile("scanner.mp3");
 }
 
 void pics()

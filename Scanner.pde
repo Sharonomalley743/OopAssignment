@@ -36,9 +36,53 @@ class Scanner
     if(!mousePressed)
     {
       locked=false;
+      scanner.pause();
+      scanner.rewind();
     }
      if (locked) {
       boxy = lock2(mouseY-1, 700, 760);//change to height not width
+      scanner.play();
+   if(boxy >= 704 && boxy < 710)
+       {
+         scanner.play();
+        stroke(0,255,0);
+        line(0,yl+4,1200,yl+4);
+       }
+      if(boxy >= 710 && boxy < 720)
+       {
+        stroke(0,255,0);
+        line(0,yl+60,1200,yl+60);
+       }
+      if(boxy >= 720 && boxy < 735)
+       {
+        stroke(0,255,0);
+        line(0,yl+180,1200,yl+180);
+       }
+       if(boxy >= 725 && boxy < 730)
+       {
+        stroke(0,255,0);
+        line(0,yl+230,1200,yl+230);
+       }
+        if(boxy >= 730 && boxy < 735)
+       {
+        stroke(0,255,0);
+        line(0,yl+300,1200,yl+300);
+       }
+       if(boxy >= 735 && boxy < 740)
+       {
+        stroke(0,255,0);
+        line(0,yl+330,1200,yl+330);
+       }
+        if(boxy >= 740 && boxy < 750)
+       {
+        stroke(0,255,0);
+        line(0,yl+380,1200,yl+380);
+       }
+        if(boxy >= 750 && boxy < 760)
+       {
+        stroke(0,255,0);
+        line(0,yl+425,1200,yl+425);
+       }
     }
   }
     
