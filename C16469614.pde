@@ -13,6 +13,7 @@ void pics()
 {
   //background image
   backgroundimage = loadImage("star.jpg");
+  //setting cols rows to the number of images needed to cover the a column and a row of the display screen
   cols = width/backgroundimage.width;
   rows = height/backgroundimage.height;
   if ( width%backgroundimage.width> 0) {
@@ -21,6 +22,7 @@ void pics()
   if ( height%backgroundimage.height > 0) {
     rows++;
   }
+  //for loop to print the image repeatedly to the background 
   image(backgroundimage, 0, 0);
   for (int y=-600; y<rows; y++)
   {
@@ -33,5 +35,6 @@ void pics()
 
 void draw() 
 {
+  //calling function to display background
   pics();
 }
