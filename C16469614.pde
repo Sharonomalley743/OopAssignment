@@ -18,6 +18,7 @@ Radar radar1 = new Radar(width/2+350, 840, 35, 0.5, color(0, 255, 0));
 Shoot shoot1 = new Shoot(518, 738, width, 16, 16);
 Scanner s1 = new Scanner();
 ships ships = new ships();
+//Explode explode = new Explode();
 
 void setup()
 {
