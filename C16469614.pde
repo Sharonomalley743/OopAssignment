@@ -38,6 +38,7 @@ void pics()
 
 void drawPanell()
 {
+  //drawing panell
   noStroke();
   fill(150);
   arc(width/2, 900, 1300, 800, PI, TWO_PI);
@@ -49,9 +50,9 @@ void drawPanell()
   strokeWeight(1);
   fill(0);
   stroke(225,0,0);
+  //set the x and y axis to the center of the rectangle
   rectMode(CENTER);
   rect(width/2-10, 640, 80, 50);
-  rectMode(CENTER);
 }
 void draw() 
 {
