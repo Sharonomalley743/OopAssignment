@@ -36,8 +36,27 @@ void pics()
   }
 }
 
+void drawPanell()
+{
+  noStroke();
+  fill(150);
+  arc(width/2, 900, 1300, 800, PI, TWO_PI);
+  fill(210);
+  arc(width/2, 900, 1100, 700, PI, TWO_PI);
+
+  fill(100);
+  arc(width/2, 900, 900, 600, PI, TWO_PI);
+  strokeWeight(1);
+  fill(0);
+  stroke(225,0,0);
+  rectMode(CENTER);
+  rect(width/2-10, 640, 80, 50);
+  rectMode(CENTER);
+}
 void draw() 
 {
   //calling function to display background
   pics();
+  //calling function to display the control panel
+  drawPanell();
 }
