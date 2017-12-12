@@ -3,6 +3,7 @@ class Zoom
   int x, y, xphoto, yphoto;
   int boxx, boxy;
   int size1, size2;
+  int cicx,cicy,cicsize,cicsize1;
   boolean over;
   boolean press;
   boolean locked = false;
@@ -17,6 +18,10 @@ class Zoom
     size2 = 10;
     boxx = x - size1/2;//x axis
     boxy = y - size2/2; //yaxis
+    cicx= width/2-200;
+    cicy = 840-25; 
+    cicsize=35-14*2;
+    cicsize1 =35-14 * 2;
   }
   
   void update() {
@@ -29,47 +34,51 @@ class Zoom
     }
     
     if (press) {
-     //drags bar up and down
-     boxy = lock(mouseY-1, 700, 760);
-     //enlarges and delarges image depending on location of bar
+     boxy = lock(mouseY-1, 700, 760);//change to height not width
      if(boxy >= 690 && boxy < 704)
        {
         xphoto = 500;
         yphoto =280;
+        cicy= 815;
        }
      if(boxy >= 704 && boxy < 710)
        {
         xphoto = 520;
         yphoto =300;
+        cicy= 821;
        }
       if(boxy >= 710 && boxy < 720)
        {
         xphoto = 540;
         yphoto =320;
+        cicy= 822;
        }
       if(boxy >= 720 && boxy < 730)
        {
         xphoto = 560;
         yphoto =340;
+        cicy= 823;
        }
         if(boxy >= 730 && boxy < 740)
        {
         xphoto = 580;
         yphoto =360;
+        cicy= 824;
        }
         if(boxy >= 740 && boxy < 750)
        {
         xphoto = 600;
         yphoto =380;
+        cicy= 825;
        }
         if(boxy >= 760 && boxy < 760)
        {
         xphoto = 620;
         yphoto =400;
+        cicy= 826;
        }
     }
   }
-  
   void overEvent() {
     if (overRect1(boxx, boxy, size1, size2)) {
       over = true;
@@ -78,7 +87,6 @@ class Zoom
     }
   }
   
-  //checks if mouse is pressed while being over the bar
   void pressEvent() {
     if (over && mousePressed || locked) {
       press = true;
@@ -98,13 +106,14 @@ class Zoom
     fill(0);
     rect(boxx, boxy, size1, size2);
     fill(180);
-    //resets image size back to normal
     if(boxy >= 690 && boxy < 704)
      {
+       cicy= 815;
        xphoto =500;
        yphoto =280;
      }
-    //covers edges of main image
+    ellipse( width/2-200, cicy, 35-14*2, 35-14 * 2);
+    
     imageMode(CENTER);
     image(photo, width/2,200, xphoto, yphoto);
     image(backgroundimage, width/2,-35);
@@ -119,7 +128,7 @@ class Zoom
     image(backgroundimage, width/2+300,300);
   }
 }
-//determines if the mouse is hovering over the bar
+
 boolean overRect1(int boxx, int boxy, int size1, int size2) {
   if (mouseX >= boxx-size1/2 && mouseX <= boxx+size1 && 
       mouseY >= boxy && mouseY <= boxy+size2) {
