@@ -1,6 +1,7 @@
 //declaring datatype and variable for image
 PImage backgroundimage;
 PImage photo;
+PImage img1;
 //declaring 2 variables to repeat the background image
 int cols;
 int rows;
@@ -12,6 +13,8 @@ void setup()
 {
   //size of window screen, p3d render mode allows me to use 3d objects
   size(1200, 900, P3D);
+  //setting image to a variable
+  img1 = loadImage("dash.png");
 }
 
 void pics()

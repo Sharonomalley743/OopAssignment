@@ -3,10 +3,10 @@ class Shoot{
   float xpos, ypos;       // x and y position of bar
   float spos, newspos;    // x position of slider
   float sposMin, sposMax; // max and min values of slider
-  int loose;             
+  int loose;              // how loose/heavy
   boolean over;           // is the mouse over the slider?
   boolean locked;
-  boolean over1;           // is the mouse over the button
+  boolean over1;           // is the mouse over the slider?
   boolean locked1;
   float ratio;
   int x,y,size1,size2;
@@ -69,6 +69,7 @@ class Shoot{
     {
       fill(0,225,0);
       rect(x, y, size1, size2);
+      image(img1, width/2-10, 640);
      if (overEvent1()) {
       over1 = true;
     } else {
@@ -82,7 +83,14 @@ class Shoot{
     }
     float d=random(-450, 150);
     if (locked1) {
-
+      stroke(0,255,0);
+      strokeWeight(2);
+      line(1200/2+50,189,1200/2+50,160);
+      line(1200/2+45,135,1200/2+50,160);
+      line(1200/2+75,160,1200/2+50,160);
+      line(1200/2+22,160,1200/2+50,160);
+      strokeWeight(5);
+      line(1200/2+50,160,1200,d);
     }
 
     }
