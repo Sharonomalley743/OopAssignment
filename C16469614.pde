@@ -7,7 +7,7 @@ int rows;
 //declare and construct objects for classes
 Zoom h1 = new Zoom();
 Radar radar1 = new Radar(width/2+350, 840, 35, 0.5, color(0, 255, 0));
-
+Shoot shoot1 = new Shoot(518, 738, width, 16, 16);
 void setup()
 {
   //size of window screen, p3d render mode allows me to use 3d objects
@@ -106,6 +106,9 @@ void draw()
   //calling class to zoom in to image
   h1.update();
   h1.display();
+  //calling classes to shoot from death star
+  shoot1.update();
+  shoot1.display();
 }
 
 void mouseReleased()
