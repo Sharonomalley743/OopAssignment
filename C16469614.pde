@@ -6,6 +6,7 @@ int cols;
 int rows;
 //declare and construct objects for classes
 Zoom h1 = new Zoom();
+Radar radar1 = new Radar(width/2+350, 840, 35, 0.5, color(0, 255, 0));
 
 void setup()
 {
@@ -99,6 +100,9 @@ void draw()
   pics();
   //calling function to display the control panel
   drawPanell();
+  //calling class to draw radars into a program
+  radar1.render();
+  radar1.update();
   //calling class to zoom in to image
   h1.update();
   h1.display();
