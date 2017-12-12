@@ -8,6 +8,7 @@ AudioPlayer scanner;
 PImage backgroundimage;
 PImage photo;
 PImage img1;
+PImage ship;
 //declaring 2 variables to repeat the background image
 int cols;
 int rows;
@@ -16,6 +17,7 @@ Zoom h1 = new Zoom();
 Radar radar1 = new Radar(width/2+350, 840, 35, 0.5, color(0, 255, 0));
 Shoot shoot1 = new Shoot(518, 738, width, 16, 16);
 Scanner s1 = new Scanner();
+ships ships = new ships();
 
 void setup()
 {
@@ -23,6 +25,7 @@ void setup()
   size(1200, 900, P3D);
   //setting image to a variable
   img1 = loadImage("dash.png");
+  ship = loadImage("ship.jpg");
   // create a minim audio application object
   minim = new Minim(this);
   //setting music file to variable
@@ -125,6 +128,8 @@ void draw()
   //calling class to scan the death star
   s1.update();
   s1.display();
+  //calling class to display image 
+  ships.update();
   //calling classes to shoot from death star
   shoot1.update();
   shoot1.display();
