@@ -10,8 +10,10 @@ class Shoot{
   boolean locked1;
   float ratio;
   int x,y,size1,size2;
-  Shoot (float xp, float yp, int sw, int sh, int l) {
-  swidth = sw;
+  
+  Shoot (float xp, float yp, int sw, int sh, int l) 
+  {
+    swidth = sw;
     sheight = sh;
     int widthtoheight = sw - sh;
     ratio = (float)sw / (float)widthtoheight;
@@ -26,7 +28,7 @@ class Shoot{
     y=640;
     size1=80;
     size2=50;
-  }
+   }
 
   void update() {
     if (overEvent()) {
@@ -61,6 +63,9 @@ class Shoot{
        mouseY > 610 && mouseY < y+30) {
       return true;
     } else {
+      //pauses and rewinds the sound
+      blast.pause();
+      blast.rewind();
       return false;
     }
     }
@@ -82,7 +87,10 @@ class Shoot{
       locked1 = false;
     }
     float d=random(-450, 150);
-    if (locked1) {
+    if (locked1) 
+    {
+      //plays the blast sound
+        blast.play();
       stroke(0,255,0);
       strokeWeight(2);
       line(1200/2+50,189,1200/2+50,160);

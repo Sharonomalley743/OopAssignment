@@ -1,3 +1,8 @@
+//insert library
+import ddf.minim.*;
+Minim minim;
+//declaring variable for sound
+AudioPlayer blast;
 //declaring datatype and variable for image
 PImage backgroundimage;
 PImage photo;
@@ -9,12 +14,17 @@ int rows;
 Zoom h1 = new Zoom();
 Radar radar1 = new Radar(width/2+350, 840, 35, 0.5, color(0, 255, 0));
 Shoot shoot1 = new Shoot(518, 738, width, 16, 16);
+
 void setup()
 {
   //size of window screen, p3d render mode allows me to use 3d objects
   size(1200, 900, P3D);
   //setting image to a variable
   img1 = loadImage("dash.png");
+  // create a minim audio application object
+  minim = new Minim(this);
+  //setting music file to variable
+  blast = minim.loadFile("blast.mp3");
 }
 
 void pics()
