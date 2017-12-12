@@ -4,6 +4,9 @@ PImage photo;
 //declaring 2 variables to repeat the background image
 int cols;
 int rows;
+//declare and construct objects for classes
+Zoom h1 = new Zoom();
+
 void setup()
 {
   //size of window screen, p3d render mode allows me to use 3d objects
@@ -96,4 +99,12 @@ void draw()
   pics();
   //calling function to display the control panel
   drawPanell();
+  //calling class to zoom in to image
+  h1.update();
+  h1.display();
+}
+
+void mouseReleased()
+{
+  h1.releaseEvent();
 }
