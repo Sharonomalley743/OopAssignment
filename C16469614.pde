@@ -64,8 +64,32 @@ void drawPanell()
   rect(width/2-20, 570, 5, 25);
   rect(width/2-30, 570, 5, 25);
   rect(width/2-40, 570, 5, 25);
-
+  
+  fill(0);
+  stroke(225,0,0);
+  rectMode(CENTER);
+  rect(width/2-10, 840, 500, 90);
+  noStroke();
+  
+  //handle
+  fill(255);
+  rect(355, 730, 23, 65);
+  stroke(0);
+  line(355, 700, 355, 760);
+  
+  //handle
+  fill(255);
+  rect(755, 730, 23, 65);
+  stroke(0);
+  line(755, 700, 755, 760);
+  
+  //handle
+  fill(0, 0, 255);
+  rect(590, 730, 90, 25);
+  stroke(0);
+  line(555, 730, 625, 730);
 }
+
 void draw() 
 {
   //calling function to display background
