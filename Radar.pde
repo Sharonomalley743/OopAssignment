@@ -26,9 +26,9 @@ class Radar
   void render()
   {
     fill(180);
-    //ellipse(cx, cy-20, radius-14*2, radius-14 * 2);
     stroke(255,0,0);
     noFill();
+    //circles and lines for radar
     ellipse(cx, cy, radius * 2, radius * 2);
     ellipse(cx, cy, 50, 50);
     ellipse(cx, cy, radius-1 * 2, radius-1 * 2);
@@ -38,6 +38,7 @@ class Radar
     line(cx, cy, cx+35, cy);
     line(cx, cy, cx-35, cy);
     int trailLength = 15;
+    //moving line through radar
     float greenIntensity = 255 / (float)trailLength;
     for(int i = 0 ; i < trailLength ; i ++)
     {
@@ -46,7 +47,7 @@ class Radar
       float y = cy -cos(theta + i * speed) * radius;
       line(cx, cy, x, y);
     }
-    
+    //engine power monitor
     stroke(255,0,0);
     rect(cx+350, cy-10, 25, 60);
     for(int i=-30; i< 30;i++)
